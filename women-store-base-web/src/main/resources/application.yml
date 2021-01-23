@@ -37,9 +37,4 @@ mybatis-plus:
 
   type-aliases-package: com.hcf.system.entity
 
-#阿里云OSS配置
-alioss:
-  endpoint: oss-cn-guangzhou.aliyuncs.com
-  accessKeyId:  LTAI4GErn1a9bmeWYTkQrE5S
-  accessKeySecret: rg2O9nPP0cRC7jMjAc3xVKHWaSdfvT
-  bucketName: xinguan-parent-hcf-createburket-test
+

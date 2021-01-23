@@ -56,7 +56,8 @@ public class MyBatisPlusCodeGenerate {
     // 数据源配置
     DataSourceConfig dsc = new DataSourceConfig();
     dsc.setUrl(
-        "jdbc:mysql://localhost:3306/xinguan?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8");
+        "jdbc:mysql://localhost:3306/womenstore?useUnicode=true&characterEncoding=UTF-8" +
+                "&serverTimezone=GMT%2B8");
     // dsc.setSchemaName("public");
     dsc.setDriverName("com.mysql.cj.jdbc.Driver");
     dsc.setUsername("root");

@@ -2,4 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hcf.system.mapper.UserMapper">
 
+    <!--分页查询用户-->
+    <select id="findUserPage" resultType="com.hcf.system.entity.User">
+        select
+        u.`user_Id`,`user_Acount`,`user_Name`,`user_Phone`,`user_Priority`,`user_Password`,`user_Address`,`user_Status`
+            from tb_user u
+            ${ew.customSqlSegment}
+    </select>
+
 </mapper>

@@ -27,8 +27,8 @@ public class SwaggerConfiguration {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("XinGuan")
-                .description("XinGuan-System-Api-Description")
+                .title("Women-Store")
+                .description("Women-Store-System-Api-Description")
                 .contact("515018620@qq.com")
                 .version("1.0")
                 .build();
