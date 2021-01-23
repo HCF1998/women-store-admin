@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: women-store-base-web
+
+  #数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/womenstore?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+    #设置json返回日期显示
+    jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8
+
+    #设置文件上传大小
+    servlet:
+      multipart:
+        max-file-size: 20MB
+        max-request-size: 50MB
+
+server:
+  port: 8081
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  global-config:
+    db-config:
+      logic-delete-field: deleted  # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+  type-aliases-package: com.hcf.system.entity
+
+#阿里云OSS配置
+alioss:
+  endpoint: oss-cn-guangzhou.aliyuncs.com
+  accessKeyId:  LTAI4GErn1a9bmeWYTkQrE5S
+  accessKeySecret: rg2O9nPP0cRC7jMjAc3xVKHWaSdfvT
+  bucketName: xinguan-parent-hcf-createburket-test
